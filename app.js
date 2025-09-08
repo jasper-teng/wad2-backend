@@ -4,8 +4,11 @@ const healthCheck = require('./controllers/healthchecks');
 const logger = require('./middleware/logger');
 const app = express();
 const port = process.env.port;
+const jwtauth = require('./middleware/jwtauth');
 
 app.use(logger);
+
+app.use(jwtauth)
 
 app.use('/', healthCheck);
 
