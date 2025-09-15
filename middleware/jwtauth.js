@@ -1,26 +1,36 @@
-// middleware/jwtauth.js
+const bcrypt = require("bcryptjs");
+const express = require("express");
 const jwt = require("jsonwebtoken");
-require("dotenv").config();
+require('dotenv').config();
+
 const secret = process.env.jwtsecret;
 
 const tokenverification = (req, res, next) => {
-  const nonSecurePaths = ["/", "/dbconntest", "/signin", "/signup", "/testCRUD", "/slave","/recipes", "/recipes/"];
-  if (nonSecurePaths.includes(req.path)) return next();
+    const nonSecurePaths = ["/healthcheck","/dbconntest","/signin", "/testCRUD", "/slave"];
+    //console.log(req.cookies);
 
-  let token = null;
-  const h = req.headers.authorization;
-  if (h && h.startsWith("Bearer ")) token = h.slice(7);
-  if (!token && req.headers["x-auth-token"]) token = req.headers["x-auth-token"];
-  if (!token && req.cookies?.authToken) token = req.cookies.authToken;
+    //const { authToken } = req.cookies;
 
-  if (!token) return res.status(401).send({ message: "No token provided." });
+    const {authToken} = "";
 
-  jwt.verify(token, secret, (err, decoded) => {
-    if (err) return res.status(401).send({ message: "Authentication failed! Please try again :(" });
-    req.userId = decoded.userId;   // our token uses userId
-    req.handle = decoded.handle;
-    next();
-  });
+    console.log(req.url);
+    console.log(req.path);
+    
+    if(nonSecurePaths.includes(req.path)){ return next();}
+
+    // verify the token
+    jwt.verify(authToken, secret, function (err, decoded) {
+        if (err) {
+            return res
+                .status(401)
+                .send({ message: "Authentication failed! Please try again :(" });
+        }
+        // save to request object for later use
+
+        req.userId = decoded.id;
+
+        next();
+    });
 };
 
 module.exports = tokenverification;
