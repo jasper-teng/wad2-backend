@@ -1,36 +1,31 @@
-const bcrypt = require("bcryptjs");
-const express = require("express");
-const jwt = require("jsonwebtoken");
+const jwt = require('jsonwebtoken');
 require('dotenv').config();
 
-const secret = process.env.jwtsecret;
+const JWT_SECRET = process.env.JWT_SECRET;
 
-const tokenverification = (req, res, next) => {
-    const nonSecurePaths = ["/healthcheck","/dbconntest","/signin", "/testCRUD", "/slave"];
-    //console.log(req.cookies);
+const jwtauth = (req, res, next) => {
+    // 1. Get the Authorization header
+    const authHeader = req.header('Authorization');
 
-    //const { authToken } = req.cookies;
+    // 2. Check for the header and the 'Bearer ' prefix
+    if (!authHeader || !authHeader.startsWith('Bearer ')) {
+        return res.status(401).json({ message: 'No token or invalid format, authorization denied' });
+    }
 
-    const {authToken} = "";
+    try {
+        // 3. Extract the token from the "Bearer <token>" string
+        const token = authHeader.substring(7);
 
-    console.log(req.url);
-    console.log(req.path);
-    
-    if(nonSecurePaths.includes(req.path)){ return next();}
+        // 4. Verify the token
+        const decoded = jwt.verify(token, JWT_SECRET);
 
-    // verify the token
-    jwt.verify(authToken, secret, function (err, decoded) {
-        if (err) {
-            return res
-                .status(401)
-                .send({ message: "Authentication failed! Please try again :(" });
-        }
-        // save to request object for later use
+        // 5. Use the CORRECT key ("userId") and attach it to the request
+        req.userId = decoded.userId;
 
-        req.userId = decoded.id;
-
-        next();
-    });
+        next(); // Proceed to the protected route
+    } catch (err) {
+        res.status(401).json({ message: 'Token is not valid' });
+    }
 };
 
-module.exports = tokenverification;
+module.exports = jwtauth;
