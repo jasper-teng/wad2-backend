@@ -4,6 +4,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const healthCheck = require('./controllers/healthchecks');
 const logger = require('./middleware/logger');
+const cors = require('cors');
 // No longer need to import jwtauth here
 const apiRoutes = require('./routes/api.routes');
 const userRoutes = require('./routes/user.routes');
@@ -27,6 +28,7 @@ mongoose.connect(MONGO_URI)
 // --- MIDDLEWARE ---
 app.use(express.json());
 app.use(logger);
+app.use(cors());
 
 // --- ROUTES ---
 app.use('/', healthCheck);
