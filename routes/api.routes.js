@@ -23,6 +23,9 @@ router.post('/news/upload', jwtauth, gesController.uploadNews);
 router.get('/news', jwtauth, gesController.listNews);
 
 // Delete a specific news article by its ID
+router.get('/news/:id', jwtauth, gesController.getNewsArticleById);
+
+// Delete a specific news article by its ID
 router.delete('/news/:id', jwtauth, gesController.deleteNews);
 
 // =================================================================
@@ -30,15 +33,20 @@ router.delete('/news/:id', jwtauth, gesController.deleteNews);
 // =================================================================
 // Analyze the sentiment for a specific news article by its ID
 router.get('/sentiment/analyze/:id', jwtauth, gesController.getArticleSentiment);
+router.get('/sentiment/overall', jwtauth, gesController.getOverallSentiment);
 
+// =================================================================
+// --- GES Routes (Joe)---
+// =================================================================
+router.get('/ges/universities', jwtauth, gesController.getUniqueUniversities);
+router.get('/ges/schools/:university', jwtauth, gesController.getUniqueSchoolsByUniversity);
+router.get('/ges/degrees/:university/:school', jwtauth, gesController.getDegreesBySchoolForLatestYear);
+router.get('/ges/history/:university/:school/:degree', jwtauth, gesController.getDegreeHistory);
 // =================================================================
 // --- Forecasting Routes (Joe) ---
 // =================================================================
 // Trigger a new forecast model run
 router.post('/forecast/run', jwtauth, gesController.runForecast);
-
-// Retrieve the latest forecast results
-router.get('/forecast/view', jwtauth, gesController.getForecast);
 
 
 module.exports = router;
