@@ -3,6 +3,7 @@ const router = express.Router();
 // --- Import Controllers ---
 const apiController = require('../controllers/api.controller');
 const gesController = require('../controllers/ges.controller');
+const aiController = require('../controllers/ai.controller');
 // --- Import Middleware ---
 const jwtauth = require('../middleware/jwtauth');
 
@@ -48,6 +49,15 @@ router.get('/ges/history/:university/:school/:degree', jwtauth, gesController.ge
 // Trigger a new forecast model run
 router.post('/forecast/run', jwtauth, gesController.runForecast);
 
+// Get the processed school summary data
+router.get('/summary/schools', jwtauth, apiController.getSchoolSummary);
+
+// =================================================================
+// --- AI Generation Routes ---
+// =================================================================
+// 2. Add new route for AI content generation
+router.post('/ai/route-from-prompt', jwtauth, aiController.generateRouteFromPrompt);
+router.get("/debug/export-ges-summary", jwtauth, gesController.exportSummary);
 
 module.exports = router;
 

@@ -3,6 +3,9 @@ const { ObjectId } = require("mongodb");
 const Sentiment = require("sentiment");
 const sentiment = new Sentiment();
 const { MultivariateLinearRegression } = require("ml-regression");
+const { getGesSummary } = require("../services/ges.service"); // ADDED
+const fs = require("fs"); // ADDED
+const path = require("path"); // ADDED
 
 // joe's news api and sentiment pipeline
 /**
@@ -681,5 +684,104 @@ exports.runForecast = async (req, res) => {
         message: "Failed to execute forecast pipeline.",
         error: error.message,
       });
+  }
+};
+
+
+/**
+ * NEW HELPER FUNCTION
+ * Retrieves a summary of unique GES data (universities, schools, degrees)
+ * to be used as context for the AI. This is NOT a route handler.
+ */
+exports.getGesSummary = async () => {
+  try {
+    const GESModel = getModel("ges_raw");
+
+    // Run all distinct queries in parallel for efficiency
+    const [universities, schools, degrees] = await Promise.all([
+      GESModel.distinct("university"),
+      GESModel.distinct("school"),
+      GESModel.distinct("degree"),
+    ]);
+
+    // Sort the lists alphabetically
+    universities.sort();
+    schools.sort();
+    degrees.sort();
+
+    // Return the structured data
+    return {
+      universities: {
+        count: universities.length,
+        list: universities,
+      },
+      schools: {
+        count: schools.length,
+        list: schools,
+      },
+      degrees: {
+        count: degrees.length,
+        list: degrees,
+      },
+    };
+  } catch (error) {
+    console.error("Error in getGesSummary:", error);
+    // Return empty data on error
+    return {
+      universities: { count: 0, list: [] },
+      schools: { count: 0, list: [] },
+      degrees: { count: 0, list: [] },
+    };
+  }
+};
+
+/**
+ * @desc    Exports the full GES summary (used by AI) to a CSV file.
+ * @route   GET /api/debug/export-ges-summary
+ */
+exports.exportSummary = async (req, res) => {
+  try {
+    const data = await getGesSummary(); // Call the service
+    if (data.length === 0) {
+      return res
+        .status(404)
+        .json({ success: false, message: "No summary data found to export." });
+    }
+
+    const headers = "university,school,degree,recordCount\n";
+
+    // Helper to make a field CSV-safe (handles nulls, commas, and quotes)
+    const safe = (field) => {
+      if (field === null || field === undefined) return '""';
+      // Escape double quotes by doubling them up, then wrap in double quotes
+      return `"${String(field).replace(/"/g, '""')}"`;
+    };
+
+    const csvRows = data.map((row) => {
+      return [
+        safe(row.university),
+        safe(row.school),
+        safe(row.degree),
+        safe(row.recordCount), // recordCount is a number, safe() will handle it
+      ].join(",");
+    });
+
+    const csvContent = headers + csvRows.join("\n");
+    // This will place the file in your root project folder (wad2-backend)
+    const filePath = path.join(__dirname, "..", "ges_summary_debug.csv");
+
+    fs.writeFileSync(filePath, csvContent);
+
+    res.status(200).json({
+      success: true,
+      message: `Successfully exported summary to ${filePath}`,
+    });
+  } catch (error) {
+    console.error("Error exporting GES summary CSV:", error);
+    res.status(500).json({
+      success: false,
+      message: "Failed to export CSV.",
+      error: error.message,
+    });
   }
 };

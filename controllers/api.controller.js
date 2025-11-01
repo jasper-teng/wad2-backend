@@ -136,3 +136,29 @@ exports.loadDataset = async (req, res) => {
     });
   }
 };
+
+exports.getSchoolSummary = async (req, res) => {
+  try {
+    const SchoolSummaryModel = getModel("school_summary");
+    // .lean() provides plain JS objects instead of Mongoose documents for faster reads
+    const summaryData = await SchoolSummaryModel.find({}).lean();
+
+    if (!summaryData || summaryData.length === 0) {
+      return res.status(404).json({
+        message: "No data found in the 'school_summary' collection.",
+      });
+    }
+
+    res.status(200).json({
+      message: "Successfully retrieved school summary data.",
+      count: summaryData.length,
+      data: summaryData,
+    });
+  } catch (error) {
+    console.error("Error retrieving school_summary data:", error);
+    res.status(500).json({
+      message: "Failed to retrieve school summary data.",
+      error: error.message,
+    });
+  }
+};
