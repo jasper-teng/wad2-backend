@@ -36,6 +36,11 @@ const datasets = [
     resource_id: "d_9cd9c40f22a4e45cac8f8b9d895fd5ce", // gdp by industry quarterly
     collectionName: "median_monthly_income",
   },
+  {
+    name: "schoolinfo",
+    resource_id: "d_688b934f82c1059ed0a6993d2a829089", // school information
+    collectionName: "school_info",
+  },
 ];
 
 /**

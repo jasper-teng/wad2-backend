@@ -46,3 +46,15 @@ exports.getGesSummary = async () => {
   }
 };
 
+exports.getSchoolSummaryList = async () => {
+ try {
+  const SchoolSummaryModel = getModel("school_info");
+  // Fetch only the 'school_name' field and ensure it's distinct
+  const schools = await SchoolSummaryModel.distinct("school_name");
+  // Return a sorted list of strings
+  return schools.sort();
+ } catch (error) {
+  console.error("Error in getSchoolSummaryList:", error);
+  return []; // Return empty array on error
+ }
+};
