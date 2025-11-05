@@ -1,3 +1,5 @@
+const fs = require("fs");
+const path = require("path"); 
 const getModel = require("../models/flexibleData.model");
 
 /**
@@ -57,4 +59,29 @@ exports.getSchoolSummaryList = async () => {
   console.error("Error in getSchoolSummaryList:", error);
   return []; // Return empty array on error
  }
+};
+
+exports.getSchoolSummaryNames = async () => {
+  try {
+    const SchoolSummaryModel = getModel("school_summary");
+    // Fetch only the 'school_name' field and ensure it's distinct
+    const schools = await SchoolSummaryModel.distinct("school_name");
+    // Return a sorted list of strings
+    return schools.sort();
+  } catch (error) {
+    console.error("Error in getSchoolSummaryNames:", error);
+    return []; // Return empty array on error
+  }
+};
+
+exports.getSchoolCoordinatesNames = async () => {
+  try {
+    const filePath = path.resolve(__dirname, "..", "data", "schoolCoordinates.json");
+    const raw = fs.readFileSync(filePath, "utf-8");
+    const json = JSON.parse(raw);
+    return Object.keys(json).sort();
+  } catch (error) {
+    console.error("Error in getSchoolCoordinatesNames:", error);
+    return [];
+  }
 };
