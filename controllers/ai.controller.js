@@ -155,17 +155,19 @@ ${contextString}
   },
   map_lookup: {
     systemPrompt: (contextString) => `
-You are a routing assistant for a map page. Identify which single school the user wants to view on the map.
+You are a routing assistant for a map page. Identify which single school the user wants to view on the map and an optional source postal code.
 
 The CONTEXT is a JSON array of all *valid school names* (from schoolCoordinates.json).
 
 Your task:
-1. Analyze the user's prompt (e.g., "show me ai tong on the map").
+1. Analyze the user's prompt (e.g., "show me ai tong on the map from 380124").
 2. Identify the single school name that exactly matches a name in the CONTEXT.
-3. **CRITICAL RULES:**
+3. **Also, look for a 6-digit Singaporean postal code (e.g., 380124, 520123) in the prompt. This is the 'source'.**
+4. **CRITICAL RULES:**
    - You MUST return exactly one school if you find a valid match.
    - The school in your response MUST be the exact string from the CONTEXT.
-4. If you cannot confidently find exactly one valid school, ask for clarification.
+   - The 'source' property should *only* be included if a 6-digit postal code is explicitly mentioned by the user.
+5. If you cannot confidently find exactly one valid school, ask for clarification.
 
 CONTEXT:
 ${contextString}
@@ -178,6 +180,11 @@ ${contextString}
           enum: ["OPEN_MAP", "ASK_FOR_CLARIFICATION"],
         },
         school: { type: "STRING" },
+        source: {
+          type: "STRING",
+          description:
+            "A 6-digit Singaporean postal code, only if provided by the user.",
+        },
         reply_message: { type: "STRING" },
       },
       required: ["intent", "reply_message"],
@@ -389,22 +396,32 @@ exports.generateRouteFromPrompt = async (req, res) => {
         }
         break;
       case "OPEN_MAP": {
-        const { school } = aiData;
-        if (school) {
-          const schoolParam = encodeURIComponent(school.toUpperCase()).replace(/%20/g, "+");
-          return res.status(200).json({
-            action_type: "API_CALL",
-            api_route: `/map?school=${schoolParam}`, // caller can append &source=380124
-            message: aiData.reply_message,
-          });
-        } else {
-          return res.status(200).json({
-            action_type: "ASK_USER",
-            api_route: null,
-            message: "Which school would you like to view on the map?",
-          });
-        }
-      }
+    // 1. Destructure 'source' from the AI response
+    const { school, source } = aiData;
+    if (school) {
+     const schoolParam = encodeURIComponent(school.toUpperCase()).replace(/%20/g, "+");
+     
+     // 2. Start building the route with just the school
+     let apiRoute = `/map?school=${schoolParam}`;
+
+     // 3. If 'source' exists and is a valid 6-digit code, append it
+     if (source && /^\d{6}$/.test(source.trim())) {
+      apiRoute += `&source=${source.trim()}`;
+     }
+
+     return res.status(200).json({
+      action_type: "API_CALL",
+      api_route: apiRoute, // Use the new, conditionally built route
+      message: aiData.reply_message,
+     });
+    } else {
+     return res.status(200).json({
+      action_type: "ASK_USER",
+      api_route: null,
+      message: "Which school would you like to view on the map?",
+s     });
+    }
+   }
 
       case "ASK_FOR_CLARIFICATION":
         res.status(200).json({
