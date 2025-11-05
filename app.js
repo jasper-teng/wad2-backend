@@ -35,6 +35,22 @@ app.use('/', healthCheck);
 app.use('/users', userRoutes);
 app.use('/api', apiRoutes);
 
+
+// Data.sg CORS issue quick fix
+const datasetId = 'd_688b934f82c1059ed0a6993d2a829089';
+const apiUrl = `https://data.gov.sg/api/action/datastore_search?resource_id=${datasetId}&limit=500`;
+
+app.get('/api/fetch-schools', async (req, res) => {
+  try {
+    const response = await axios.get(apiUrl); 
+    res.json(response.data);
+  } catch (error) {
+    console.error('Error fetching data:', error);
+    res.status(500).json({ error: 'Failed to fetch data' });
+  }
+});
+
+
 // REMOVE THIS LINE: app.use(jwtauth);
 
 app.listen(port, () => {
