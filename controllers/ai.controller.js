@@ -1,5 +1,5 @@
 require("dotenv").config();
-const { getGesSummary, getSchoolSummaryList } = require("../services/ges.service");
+const { getGesSummary, getSchoolSummaryList, getSchoolSummaryNames, getSchoolCoordinatesNames  } = require("../services/ges.service");
 
 const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
 const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${GEMINI_API_KEY}`;
@@ -12,6 +12,7 @@ You are a high-level routing assistant for an API. Your ONLY job is to classify 
 
 - "ges_routing": The user is asking about salary, jobs, pay, or a specific university degree (e.g., "smu accountancy", "how much does info systems make?", "NUS computer science salary").
 - "school_comparison": The user is asking to compare 2 or more schools (e.g., "compare admiralty primary and ai tong", "admiralty vs ahmad ibrahim primary school").
+- "distinct_programme_comparison": The user is asking to compare distinct programmes, CCAs, or special offerings between 2 or more schools (e.g., "compare distinct programmes between Admiralty and Ahmad Ibrahim", "what are the differences in CCAs?").
 - "general_question": The user is asking a general question, making small talk, or saying hello (e.g., "hi", "how are you?", "what is this site?").
 
 You must pick only one category.
@@ -22,7 +23,13 @@ You must pick only one category.
       intent: {
         type: "STRING",
         description: "The single best category for the user's prompt.",
-        enum: ["ges_routing", "school_comparison", "general_question"],
+        enum: [
+          "ges_routing",
+          "school_comparison",
+          "distinct_programme_comparison",
+          "map_lookup",
+          "general_question",
+        ],
       },
       // We ask for a reply_message here in case it's a general question,
       // so we can answer in one call.
@@ -64,10 +71,10 @@ ${contextString}
           description: "The category of the user's request.",
           enum: ["GET_GES_HISTORY", "ASK_FOR_CLARIFICATION"],
         },
-        university: { "type": "STRING" },
-        school: { "type": "STRING" },
-        degree: { "type": "STRING" },
-        reply_message: { "type": "STRING" },
+        university: { type: "STRING" },
+        school: { type: "STRING" },
+        degree: { type: "STRING" },
+        reply_message: { type: "STRING" },
       },
       required: ["intent", "reply_message"],
     },
@@ -75,18 +82,18 @@ ${contextString}
   school_comparison: {
     // This prompt is now injected with School List data
     systemPrompt: (contextString) => `
-You are a routing assistant for a school comparison website. Your goal is to identify which schools a user wants to compare.
+You are a routing assistant for a school comparison website. Your goal is to identify which schools a user wants to compare for their *general details*.
 
 The CONTEXT is a JSON array of all *valid school names*.
 
 Your task is to:
-1.  Analyze the user's prompt (e.g., "compare Admiralty Primary and Ai Tong School").
+1.  Analyze the user's prompt (e.g., "compare admiralty primary and ai tong school").
 2.  Identify all school names mentioned in the prompt that *exactly match* a name in the CONTEXT.
 3.  Collect these matched names into an array.
 4.  **CRITICAL RULES:**
-     - You MUST find at least 2 schools.
-     - You MUST NOT include more than 4 schools.
-     - The school names in your response MUST be the *exact* string from the CONTEXT.
+    - You MUST find at least 2 schools.
+    - You MUST NOT include more than 4 schools.
+    - The school names in your response MUST be the *exact* string from the CONTEXT.
 5.  If the user asks to compare 2, 3, or 4 valid schools, set the intent to "COMPARE_SCHOOLS".
 6.  If the user provides 0, 1, or more than 4 schools, ask for clarification (e.g., "Please tell me which 2 to 4 schools you'd like to compare."). Set intent to "ASK_FOR_CLARIFICATION".
 
@@ -102,9 +109,83 @@ ${contextString}
         },
         schools_to_compare: {
           type: "ARRAY",
-          items: { "type": "STRING" },
+          items: { type: "STRING" },
         },
-        reply_message: { "type": "STRING" },
+        reply_message: { type: "STRING" },
+      },
+      required: ["intent", "reply_message"],
+    },
+  },
+  // --- NEW CASE ADDED HERE ---
+  distinct_programme_comparison: {
+    // This prompt is also injected with School List data
+    systemPrompt: (contextString) => `
+You are a routing assistant for a school comparison website. Your goal is to identify which schools a user wants to compare for their *distinct programmes or CCAs*.
+
+The CONTEXT is a JSON array of all *valid school names*.
+
+Your task is to:
+1.  Analyze the user's prompt (e.g., "compare distinct programmes between Admiralty and Ai Tong School").
+2.  Identify all school names mentioned in the prompt that *exactly match* a name in the CONTEXT.
+3.  Collect these matched names into an array.
+4.  **CRITICAL RULES:**
+    - You MUST find exactly 2 schools.
+    - The school names in your response MUST be the *exact* string from the CONTEXT.
+5.  If the user asks to compare exactly 2 valid schools, set the intent to "COMPARE_DISTINCT_PROGRAMMES".
+6.  If the user provides 0, 1, or more than 2 schools, ask for clarification (e.g., "Please tell me which 2 schools you'd like to compare for their distinct programmes."). Set intent to "ASK_FOR_CLARIFICATION".
+
+CONTEXT:
+${contextString}
+`,
+    responseSchema: {
+      type: "OBJECT",
+      properties: {
+        intent: {
+          type: "STRING",
+          enum: ["COMPARE_DISTINCT_PROGRAMMES", "ASK_FOR_CLARIFICATION"],
+        },
+        schools_to_compare: {
+          type: "ARRAY",
+          items: { type: "STRING" },
+        },
+        reply_message: { type: "STRING" },
+      },
+      required: ["intent", "reply_message"],
+    },
+  },
+  map_lookup: {
+    systemPrompt: (contextString) => `
+You are a routing assistant for a map page. Identify which single school the user wants to view on the map and an optional source postal code.
+
+The CONTEXT is a JSON array of all *valid school names* (from schoolCoordinates.json).
+
+Your task:
+1. Analyze the user's prompt (e.g., "show me ai tong on the map from 380124").
+2. Identify the single school name that exactly matches a name in the CONTEXT.
+3. **Also, look for a 6-digit Singaporean postal code (e.g., 380124, 520123) in the prompt. This is the 'source'.**
+4. **CRITICAL RULES:**
+   - You MUST return exactly one school if you find a valid match.
+   - The school in your response MUST be the exact string from the CONTEXT.
+   - The 'source' property should *only* be included if a 6-digit postal code is explicitly mentioned by the user.
+5. If you cannot confidently find exactly one valid school, ask for clarification.
+
+CONTEXT:
+${contextString}
+`,
+    responseSchema: {
+      type: "OBJECT",
+      properties: {
+        intent: {
+          type: "STRING",
+          enum: ["OPEN_MAP", "ASK_FOR_CLARIFICATION"],
+        },
+        school: { type: "STRING" },
+        source: {
+          type: "STRING",
+          description:
+            "A 6-digit Singaporean postal code, only if provided by the user.",
+        },
+        reply_message: { type: "STRING" },
       },
       required: ["intent", "reply_message"],
     },
@@ -113,7 +194,7 @@ ${contextString}
 
 /**
  * @desc    Analyze a user's prompt and return a structured action.
- *          This now uses a 2-step AI process.
+ * This now uses a 2-step AI process.
  * @route   POST /api/ai/prompt
  */
 exports.generateRouteFromPrompt = async (req, res) => {
@@ -180,6 +261,10 @@ exports.generateRouteFromPrompt = async (req, res) => {
       contextData = await getGesSummary();
     } else if (detectedIntent === "school_comparison") {
       contextData = await getSchoolSummaryList();
+    } else if (detectedIntent === "distinct_programme_comparison") {
+      contextData = await getSchoolSummaryNames();
+    } else if (detectedIntent === "map_lookup") {
+      contextData = await getSchoolCoordinatesNames();
     }
 
     if (!contextData || contextData.length === 0) {
@@ -248,14 +333,14 @@ exports.generateRouteFromPrompt = async (req, res) => {
         break;
 
       case "COMPARE_SCHOOLS":
-        const schools = aiData.schools_to_compare;
+        const schoolsToCompare = aiData.schools_to_compare;
         if (
-          Array.isArray(schools) &&
-          schools.length >= 2 &&
-          schools.length <= 4
+          Array.isArray(schoolsToCompare) &&
+          schoolsToCompare.length >= 2 &&
+          schoolsToCompare.length <= 4
         ) {
           // Build the query string with custom formatting
-          const queryString = schools
+          const queryString = schoolsToCompare
             .map((name, index) => {
               // 1. Uppercase, 2. URL encode, 3. Replace %20 with +
               const formattedName = encodeURIComponent(
@@ -278,6 +363,65 @@ exports.generateRouteFromPrompt = async (req, res) => {
           });
         }
         break;
+
+      // --- NEW SWITCH CASE ADDED HERE ---
+      case "COMPARE_DISTINCT_PROGRAMMES":
+        const schools = aiData.schools_to_compare;
+        if (
+          Array.isArray(schools) &&
+          schools.length === 2
+        ) {
+          // Build the query string with custom formatting
+          const queryString = schools
+            .map((name, index) => {
+              // 1. Uppercase, 2. URL encode, 3. Replace %20 with +
+              const formattedName = encodeURIComponent(
+                name.toUpperCase()
+              ).replace(/%20/g, "+");
+              return `school${index + 1}=${formattedName}`;
+            })
+            .join("&");
+          res.status(200).json({
+            action_type: "API_CALL",
+            api_route: `/distinctProgramme?${queryString}`, // <-- NEW API ROUTE
+            message: aiData.reply_message,
+          });
+        } else {
+          // Fallback if AI executor fails
+          res.status(200).json({
+            action_type: "ASK_USER",
+            api_route: null,
+            message: "I seem to have an error. Which 2 schools would you like to compare for their distinct programmes?",
+          });
+        }
+        break;
+      case "OPEN_MAP": {
+    // 1. Destructure 'source' from the AI response
+    const { school, source } = aiData;
+    if (school) {
+     const schoolParam = encodeURIComponent(school.toUpperCase()).replace(/%20/g, "+");
+     
+     // 2. Start building the route with just the school
+     let apiRoute = `/map?school=${schoolParam}`;
+
+     // 3. If 'source' exists and is a valid 6-digit code, append it
+     if (source && /^\d{6}$/.test(source.trim())) {
+      apiRoute += `&source=${source.trim()}`;
+     }
+
+     return res.status(200).json({
+      action_type: "API_CALL",
+      api_route: apiRoute, // Use the new, conditionally built route
+      message: aiData.reply_message,
+     });
+    } else {
+     return res.status(200).json({
+      action_type: "ASK_USER",
+      api_route: null,
+      message: "Which school would you like to view on the map?",
+s     });
+    }
+   }
 
       case "ASK_FOR_CLARIFICATION":
         res.status(200).json({
@@ -310,5 +454,3 @@ exports.generateRouteFromPrompt = async (req, res) => {
       });
   }
 };
-
-

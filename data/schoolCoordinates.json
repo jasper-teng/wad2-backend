@@ -1,0 +1,1378 @@
+{
+  "SCHOOL OF SCIENCE AND TECHNOLOGY, SINGAPORE": {
+    "lat": 1.313653,
+    "lng": 103.774264
+  },
+  "Singapore University of Technolngy and Design (SUTD)": {
+    "lat": 1.3198,
+    "lng": 103.9644
+  },
+  "Singapore University of Social Sciences (SUSS)": {
+    "lat": 1.3292738,
+    "lng": 103.7762131
+  },
+  "Singapore Institute of Technolngy (SIT)": {
+    "lat": 1.3966,
+    "lng": 103.9102
+  },
+  "Singapore Management University (SMU)": {
+    "lat": 1.296168,
+    "lng": 103.8500437
+  },
+  "Nanyang Technolngical University (NTU)": {
+    "lat": 1.3484104,
+    "lng": 103.6829332
+  },
+  "National University of Singapore (NUS)": {
+    "lat": 1.2962,
+    "lng": 103.7769
+  },
+  "ZHONGHUA SECONDARY SCHOOL": {
+    "lat": 1.34851635,
+    "lng": 103.869346048848
+  },
+  "ZHONGHUA PRIMARY SCHOOL": {
+    "lat": 1.3599,
+    "lng": 103.8696
+  },
+  "ZHENGHUA SECONDARY SCHOOL": {
+    "lat": 1.3895029,
+    "lng": 103.765195678289
+  },
+  "ZHENGHUA PRIMARY SCHOOL": {
+    "lat": 1.37942415,
+    "lng": 103.769676496815
+  },
+  "ZHANGDE PRIMARY SCHOOL": {
+    "lat": 1.2842497,
+    "lng": 103.826081924597
+  },
+  "YUYING SECONDARY SCHOOL": {
+    "lat": 1.35709395,
+    "lng": 103.89070897404
+  },
+  "YUSOF ISHAK SECONDARY SCHOOL": {
+    "lat": 1.40708265,
+    "lng": 103.896593460276
+  },
+  "YUMIN PRIMARY SCHOOL": {
+    "lat": 1.3512643,
+    "lng": 103.950873544019
+  },
+  "YUHUA SECONDARY SCHOOL": {
+    "lat": 1.34688825,
+    "lng": 103.722425077244
+  },
+  "YUHUA PRIMARY SCHOOL": {
+    "lat": 1.3428913,
+    "lng": 103.740960035662
+  },
+  "YUAN CHING SECONDARY SCHOOL": {
+    "lat": 1.3415819,
+    "lng": 103.720147222945
+  },
+  "YU NENG PRIMARY SCHOOL": {
+    "lat": 1.33432875,
+    "lng": 103.932829264872
+  },
+  "YISHUN TOWN SECONDARY SCHOOL": {
+    "lat": 1.43266455,
+    "lng": 103.837885121417
+  },
+  "YISHUN SECONDARY SCHOOL": {
+    "lat": 1.42793975,
+    "lng": 103.82902825
+  },
+  "YISHUN PRIMARY SCHOOL": {
+    "lat": 1.4335987,
+    "lng": 103.8338868868
+  },
+  "YISHUN INNOVA JUNIOR COLLEGE": {
+    "lat": 1.42449365,
+    "lng": 103.830515278545
+  },
+  "YIO CHU KANG SECONDARY SCHOOL": {
+    "lat": 1.3781326,
+    "lng": 103.841765
+  },
+  "YIO CHU KANG PRIMARY SCHOOL": {
+    "lat": 1.37791475,
+    "lng": 103.885461268929
+  },
+  "YEW TEE PRIMARY SCHOOL": {
+    "lat": 1.39696185,
+    "lng": 103.751092991212
+  },
+  "YANGZHENG PRIMARY SCHOOL": {
+    "lat": 31.6531434,
+    "lng": 117.463548101623
+  },
+  "XISHAN PRIMARY SCHOOL": {
+    "lat": 1.43343,
+    "lng": 103.8377865545
+  },
+  "XINMIN SECONDARY SCHOOL": {
+    "lat": 1.3725582,
+    "lng": 103.882928182226
+  },
+  "XINMIN PRIMARY SCHOOL": {
+    "lat": 1.3714,
+    "lng": 103.8831
+  },
+  "XINGNAN PRIMARY SCHOOL": {
+    "lat": 1.34,
+    "lng": 103.69
+  },
+  "XINGHUA PRIMARY SCHOOL": {
+    "lat": 1.3580028,
+    "lng": 103.890515013502
+  },
+  "WOODLANDS SECONDARY SCHOOL": {
+    "lat": 1.4400944644817577, 
+    "lng": 103.77433072935722
+  },
+  "WOODLANDS RING SECONDARY SCHOOL": {
+    "lat": 1.436023,
+    "lng": 103.800435349457
+  },
+  "WOODLANDS RING PRIMARY SCHOOL": {
+    "lat": 1.43466535,
+    "lng": 103.797840506395
+  },
+  "WOODLANDS PRIMARY SCHOOL": {
+    "lat": 1.4367,
+    "lng": 103.7916
+  },
+  "WOODGROVE SECONDARY SCHOOL": {
+    "lat": 1.42833185,
+    "lng": 103.796549247454
+  },
+  "WOODGROVE PRIMARY SCHOOL": {
+    "lat": 1.4331624,
+    "lng": 103.79032679117
+  },
+  "WHITLEY SECONDARY SCHOOL": {
+    "lat": 1.35567945,
+    "lng": 103.842557581337
+  },
+  "WHITE SANDS PRIMARY SCHOOL": {
+    "lat": 1.36547295,
+    "lng": 103.961254558825
+  },
+  "WESTWOOD SECONDARY SCHOOL": {
+    "lat": 1.35357275,
+    "lng": 103.701802508636
+  },
+  "WESTWOOD PRIMARY SCHOOL": {
+    "lat": 1.35,
+    "lng": 103.7
+  },
+  "WEST VIEW PRIMARY SCHOOL": {
+    "lat": 1.38,
+    "lng": 103.76
+  },
+  "WEST SPRING SECONDARY SCHOOL": {
+    "lat": 1.38828505,
+    "lng": 103.759873571745
+  },
+  "WEST SPRING PRIMARY SCHOOL": {
+    "lat": 1.38951255,
+    "lng": 103.766295117367
+  },
+  "WEST GROVE PRIMARY SCHOOL": {
+    "lat": 1.340667,
+    "lng": 103.699167
+  },
+  "WELLINGTON PRIMARY SCHOOL": {
+    "lat": 1.45,
+    "lng": 103.82
+  },
+  "WATERWAY PRIMARY SCHOOL": {
+    "lat": 1.3992088,
+    "lng": 103.918394140523
+  },
+  "VICTORIA SCHOOL": {
+    "lat": 1.308575,
+    "lng": 103.927467
+  },
+  "VICTORIA JUNIOR COLLEGE": {
+    "lat": 1.3061913,
+    "lng": 103.919844446519
+  },
+  "VALOUR PRIMARY SCHOOL": {
+    "lat": 1.4072779,
+    "lng": 103.898857181059
+  },
+  "UNITY SECONDARY SCHOOL": {
+    "lat": 1.39972215,
+    "lng": 103.746029392178
+  },
+  "UNITY PRIMARY SCHOOL": {
+    "lat": 1.4032,
+    "lng": 103.7473
+  },
+  "TOWNSVILLE PRIMARY SCHOOL": {
+    "lat": 1.3603771,
+    "lng": 103.853882188471
+  },
+  "TEMASEK SECONDARY SCHOOL": {
+    "lat": 1.3163473,
+    "lng": 103.94785330286
+  },
+  "TEMASEK PRIMARY SCHOOL": {
+    "lat": 1.3173917,
+    "lng": 103.945773034972
+  },
+  "TEMASEK JUNIOR COLLEGE": {
+    "lat": 1.31820425,
+    "lng": 103.934980269508
+  },
+  "TELOK KURAU PRIMARY SCHOOL": {
+    "lat": 1.33088455,
+    "lng": 103.911328486464
+  },
+  "TECK WHYE PRIMARY SCHOOL": {
+    "lat": 1.3838682,
+    "lng": 103.75364438639
+  },
+  "TECK GHEE PRIMARY SCHOOL": {
+    "lat": 1.36536405,
+    "lng": 103.850936965751
+  },
+  "TAO NAN SCHOOL": {
+    "lat": 1.30492865,
+    "lng": 103.91114509667
+  },
+  "TANJONG KATONG SECONDARY SCHOOL": {
+    "lat": 1.3083187,
+    "lng": 103.89733967436
+  },
+  "TANJONG KATONG PRIMARY SCHOOL": {
+    "lat": 1.30530945,
+    "lng": 103.900440916118
+  },
+  "TANJONG KATONG GIRLS' SCHOOL": {
+    "lat": 1.3080557,
+    "lng": 103.8952043
+  },
+  "TAMPINES SECONDARY SCHOOL": {
+    "lat": 1.3494462,
+    "lng": 103.944102292555
+  },
+  "TAMPINES PRIMARY SCHOOL": {
+    "lat": 1.3503174,
+    "lng": 103.943901860016
+  },
+  "TAMPINES NORTH PRIMARY SCHOOL": {
+    "lat": 1.3605469,
+    "lng": 103.949124318814
+  },
+  "TAMPINES MERIDIAN JUNIOR COLLEGE": {
+    "lat": 1.37620765,
+    "lng": 103.937903624387
+  },
+  "SWISS COTTAGE SECONDARY SCHOOL": {
+    "lat": 1.36456,
+    "lng": 103.75043307404
+  },
+  "ST. STEPHEN'S SCHOOL": {
+    "lat": 1.32,
+    "lng": 103.92
+  },
+  "ST. PATRICK'S SCHOOL": {
+    "lat": 1.31,
+    "lng": 103.92
+  },
+  "ST. MARGARET'S SCHOOL (SECONDARY)": {
+    "lat": 1.3201,
+    "lng": 103.8095
+  },
+  "ST. MARGARET'S SCHOOL (PRIMARY)": {
+    "lat": 1.3,
+    "lng": 103.85
+  },
+  "ST. JOSEPH'S INSTITUTION JUNIOR": {
+    "lat": 1.31754345,
+    "lng": 103.846306815766
+  },
+  "ST. JOSEPH'S INSTITUTION": {
+    "lat": 1.3242,
+    "lng": 103.828326434112
+  },
+  "ST. HILDA'S SECONDARY SCHOOL": {
+    "lat": 1.350089,
+    "lng": 103.936995146152
+  },
+  "ST. HILDA'S PRIMARY SCHOOL": {
+    "lat": 1.3493751,
+    "lng": 103.936593633113
+  },
+  "ST. GABRIEL'S SECONDARY SCHOOL": {
+    "lat": 1.346723,
+    "lng": 103.875437275
+  },
+  "ST. GABRIEL'S PRIMARY SCHOOL": {
+    "lat": 1.3494,
+    "lng": 103.8621
+  },
+  "ST. ANTHONY'S PRIMARY SCHOOL": {
+    "lat": 1.3609,
+    "lng": 103.7491
+  },
+  "ST. ANTHONY'S CANOSSIAN SECONDARY SCHOOL": {
+    "lat": 1.334946,
+    "lng": 103.942363612284
+  },
+  "ST. ANTHONY'S CANOSSIAN PRIMARY SCHOOL": {
+    "lat": 1.3349316,
+    "lng": 103.940866198218
+  },
+  "ST. ANDREW'S JUNIOR COLLEGE": {
+    "lat": 1.33193185,
+    "lng": 103.863531302399
+  },
+  "ST ANDREW'S SCHOOL (SECONDARY)": {
+    "lat": 1.3305,
+    "lng": 103.8635
+  },
+  "ST ANDREW'S SCHOOL (JUNIOR)": {
+    "lat": 1.3310,
+    "lng": 103.8653
+  },
+  "SPRINGFIELD SECONDARY SCHOOL": {
+    "lat": 1.34999395,
+    "lng": 103.929985735164
+  },
+  "SPRINGDALE PRIMARY SCHOOL": {
+    "lat": 1.394934,
+    "lng": 103.889652
+  },
+  "SPECTRA SECONDARY SCHOOL": {
+    "lat": 1.43640725,
+    "lng": 103.804283603032
+  },
+  "SOUTH VIEW PRIMARY SCHOOL": {
+    "lat": 1.37,
+    "lng": 103.7417
+  },
+  "SINGAPORE SPORTS SCHOOL": {
+    "lat": 1.4273697,
+    "lng": 103.787655212984
+  },
+  "SINGAPORE CHINESE GIRLS' SCHOOL": {
+    "lat": 1.32107125,
+    "lng": 103.827574191513
+  },
+  "SINGAPORE CHINESE GIRLS' PRIMARY SCHOOL": {
+    "lat": 1.3202,
+    "lng": 103.8297
+  },
+  "SI LING PRIMARY SCHOOL": {
+    "lat": 1.432724,
+    "lng": 103.785778512922
+  },
+  "SHUQUN PRIMARY SCHOOL": {
+    "lat": 1.34712705,
+    "lng": 103.72159024758
+  },
+  "SERANGOON SECONDARY SCHOOL": {
+    "lat": 1.3749592,
+    "lng": 103.90204576428
+  },
+  "SERANGOON GARDEN SECONDARY SCHOOL": {
+    "lat": 1.3696622,
+    "lng": 103.868983766216
+  },
+  "SENGKANG GREEN PRIMARY SCHOOL": {
+    "lat": 1.39288245,
+    "lng": 103.874803611514
+  },
+  "SENG KANG SECONDARY SCHOOL": {
+    "lat": 1.38646525,
+    "lng": 103.898681613622
+  },
+  "SENG KANG PRIMARY SCHOOL": {
+    "lat": 1.38939055,
+    "lng": 103.899395348414
+  },
+  "SEMBAWANG SECONDARY SCHOOL": {
+    "lat": 1.44565285,
+    "lng": 103.816662787979
+  },
+  "SEMBAWANG PRIMARY SCHOOL": {
+    "lat": 1.4452989,
+    "lng": 103.820890387172
+  },
+  "SCHOOL OF THE ARTS, SINGAPORE": {
+    "lat": 1.2990858,
+    "lng": 103.8490353
+  },
+  "SCHOOL OF SCIENCE AND TECHNOlngY, SINGAPORE": {
+    "lat": 1.3131051,
+    "lng": 103.773725392038
+  },
+  "RULANG PRIMARY SCHOOL": {
+    "lat": 1.34660905,
+    "lng": 103.718736999372
+  },
+  "ROSYTH SCHOOL": {
+    "lat": 1.3728695,
+    "lng": 103.874509297525
+  },
+  "RIVERVALE PRIMARY SCHOOL": {
+    "lat": 1.3932,
+    "lng": 103.9044
+  },
+  "RIVERSIDE SECONDARY SCHOOL": {
+    "lat": 1.4405,
+    "lng": 103.7886
+  },
+  "RIVERSIDE PRIMARY SCHOOL": {
+    "lat": 1.4469,
+    "lng": 103.8016
+  },
+  "RIVER VALLEY PRIMARY SCHOOL": {
+    "lat": 1.29398185,
+    "lng": 103.836084720662
+  },
+  "RIVER VALLEY HIGH SCHOOL": {
+    "lat": 1.3433748,
+    "lng": 103.709305800823
+  },
+  "REGENT SECONDARY SCHOOL": {
+    "lat": 1.39351375,
+    "lng": 103.751012093809
+  },
+  "RED SWASTIKA SCHOOL": {
+    "lat": 1.3336412,
+    "lng": 103.934618609286
+  },
+  "RAFFLES INSTITUTION": {
+    "lat": 1.3467461,
+    "lng": 103.844456718824
+  },
+  "RAFFLES GIRLS' SCHOOL (SECONDARY)": {
+    "lat": 1.34295555,
+    "lng": 103.843307099442
+  },
+  "RAFFLES GIRLS' PRIMARY SCHOOL": {
+    "lat": 1.33012955,
+    "lng": 103.806262306168
+  },
+  "RADIN MAS PRIMARY SCHOOL": {
+    "lat": 1.2750442,
+    "lng": 103.824023930969
+  },
+  "QUEENSWAY SECONDARY SCHOOL": {
+    "lat": 1.3025375,
+    "lng": 103.8015922
+  },
+  "QUEENSTOWN SECONDARY SCHOOL": {
+    "lat": 1.2932897,
+    "lng": 103.813256661444
+  },
+  "QUEENSTOWN PRIMARY SCHOOL": {
+    "lat": 1.2960256,
+    "lng": 103.807851719314
+  },
+  "QIHUA PRIMARY SCHOOL": {
+    "lat": 1.4420502,
+    "lng": 103.788333692865
+  },
+  "QIFA PRIMARY SCHOOL": {
+    "lat": 1.31280555,
+    "lng": 103.7569649547
+  },
+  "PUNGGOL VIEW PRIMARY SCHOOL": {
+    "lat": 1.4053286,
+    "lng": 103.905278219784
+  },
+  "PUNGGOL SECONDARY SCHOOL": {
+    "lat": 1.40239815,
+    "lng": 103.909146782783
+  },
+  "PUNGGOL PRIMARY SCHOOL": {
+    "lat": 1.37813115,
+    "lng": 103.894754465753
+  },
+  "PUNGGOL GREEN PRIMARY SCHOOL": {
+    "lat": 1.40198075,
+    "lng": 103.898548833592
+  },
+  "PUNGGOL COVE PRIMARY SCHOOL": {
+    "lat": 1.4117401,
+    "lng": 103.899219235305
+  },
+  "PRINCESS ELIZABETH PRIMARY SCHOOL": {
+    "lat": 1.3493822,
+    "lng": 103.740954200181
+  },
+  "PRESBYTERIAN HIGH SCHOOL": {
+    "lat": 1.3832006,
+    "lng": 103.842859934501
+  },
+  "POI CHING SCHOOL": {
+    "lat": 1.3577705,
+    "lng": 103.935486787369
+  },
+  "PIONEER PRIMARY SCHOOL": {
+    "lat": 1.3384,
+    "lng": 103.6881
+  },
+  "PEIYING PRIMARY SCHOOL": {
+    "lat": 1.4177946,
+    "lng": 103.83016958774
+  },
+  "PEIRCE SECONDARY SCHOOL": {
+    "lat": 1.3664814,
+    "lng": 103.829533100123
+  },
+  "PEICAI SECONDARY SCHOOL": {
+    "lat": 1.35938135,
+    "lng": 103.870646885183
+  },
+  "PEI TONG PRIMARY SCHOOL": {
+    "lat": 1.316004,
+    "lng": 103.767845167744
+  },
+  "PEI HWA SECONDARY SCHOOL": {
+    "lat": 1.39075955,
+    "lng": 103.878183961701
+  },
+  "PEI HWA PRESBYTERIAN PRIMARY SCHOOL": {
+    "lat": 1.3380993,
+    "lng": 103.776218820502
+  },
+  "PEI CHUN PUBLIC SCHOOL": {
+    "lat": 1.3370857,
+    "lng": 103.855679949099
+  },
+  "PAYA LEBAR METHODIST GIRLS' SCHOOL (SECONDARY)": {
+    "lat": 1.34993195,
+    "lng": 103.885665833115
+  },
+  "PAYA LEBAR METHODIST GIRLS' SCHOOL (PRIMARY)": {
+    "lat": 1.34993195,
+    "lng": 103.885665833115
+  },
+  "PASIR RIS SECONDARY SCHOOL": {
+    "lat": 1.35470585,
+    "lng": 103.948527244953
+  },
+  "PASIR RIS PRIMARY SCHOOL": {
+    "lat": 1.37215285,
+    "lng": 103.963026300222
+  },
+  "PASIR RIS CREST SECONDARY SCHOOL": {
+    "lat": 1.37271,
+    "lng": 103.959760990901
+  },
+  "PARK VIEW PRIMARY SCHOOL": {
+    "lat": 1.365,
+    "lng": 103.946
+  },
+  "PALM VIEW PRIMARY SCHOOL": {
+    "lat": 1.38410015,
+    "lng": 103.89115435184
+  },
+  "OUTRAM SECONDARY SCHOOL": {
+    "lat": 1.28627625,
+    "lng": 103.837126699417
+  },
+  "ORCHID PARK SECONDARY SCHOOL": {
+    "lat": 1.41577495,
+    "lng": 103.83810287862
+  },
+  "OPERA ESTATE PRIMARY SCHOOL": {
+    "lat": 1.3196642,
+    "lng": 103.923765984027
+  },
+  "OASIS PRIMARY SCHOOL": {
+    "lat": 1.4,
+    "lng": 103.91
+  },
+  "NUS HIGH SCHOOL OF MATHEMATICS AND SCIENCE": {
+    "lat": 1.3069962,
+    "lng": 103.769995639208
+  },
+  "NORTHSHORE PRIMARY SCHOOL": {
+    "lat": 1.4180938,
+    "lng": 103.904667006741
+  },
+  "NORTHOAKS PRIMARY SCHOOL": {
+    "lat": 1.4452356,
+    "lng": 103.806576841441
+  },
+  "NORTHLIGHT SCHOOL": {
+    "lat": 1.31946105,
+    "lng": 103.855611835469
+  },
+  "NORTHLAND SECONDARY SCHOOL": {
+    "lat": 1.43571045,
+    "lng": 103.840719473428
+  },
+  "NORTHLAND PRIMARY SCHOOL": {
+    "lat": 1.4212034,
+    "lng": 103.840583969844
+  },
+  "NORTHBROOKS SECONDARY SCHOOL": {
+    "lat": 1.4212669,
+    "lng": 103.8447792
+  },
+  "NORTH VISTA SECONDARY SCHOOL": {
+    "lat": 1.38173725,
+    "lng": 103.898739511264
+  },
+  "NORTH VISTA PRIMARY SCHOOL": {
+    "lat": 1.3828948,
+    "lng": 103.895977069554
+  },
+  "NORTH VIEW PRIMARY SCHOOL": {
+    "lat": 1.42773465,
+    "lng": 103.848656571765
+  },
+  "NORTH SPRING PRIMARY SCHOOL": {
+    "lat": 1.3876014,
+    "lng": 103.903789223705
+  },
+  "NGEE ANN SECONDARY SCHOOL": {
+    "lat": 1.3543069,
+    "lng": 103.956652807804
+  },
+  "NGEE ANN PRIMARY SCHOOL": {
+    "lat": 1.30554595,
+    "lng": 103.917952475953
+  },
+  "NEW TOWN SECONDARY SCHOOL": {
+    "lat": 1.30988355,
+    "lng": 103.773601366895
+  },
+  "NEW TOWN PRIMARY SCHOOL": {
+    "lat": 1.29976,
+    "lng": 103.8
+  },
+  "NAVAL BASE SECONDARY SCHOOL": {
+    "lat": 1.419211,
+    "lng": 103.830994970322
+  },
+  "NAVAL BASE PRIMARY SCHOOL": {
+    "lat": 1.4165306,
+    "lng": 103.838461019514
+  },
+  "NATIONAL JUNIOR COLLEGE": {
+    "lat": 1.330727,
+    "lng": 103.804416671621
+  },
+  "NANYANG PRIMARY SCHOOL": {
+    "lat": 1.32083185,
+    "lng": 103.808216594969
+  },
+  "NANYANG JUNIOR COLLEGE": {
+    "lat": 1.35096925,
+    "lng": 103.866625463456
+  },
+  "NANYANG GIRLS' HIGH SCHOOL": {
+    "lat": 1.33050835,
+    "lng": 103.80232397036
+  },
+  "NAN HUA PRIMARY SCHOOL": {
+    "lat": 1.31983825,
+    "lng": 103.761675099947
+  },
+  "NAN HUA HIGH SCHOOL": {
+    "lat": 1.3083036,
+    "lng": 103.769096967785
+  },
+  "NAN CHIAU PRIMARY SCHOOL": {
+    "lat": 1.39202675,
+    "lng": 103.891042447753
+  },
+  "NAN CHIAU HIGH SCHOOL": {
+    "lat": 1.3894693,
+    "lng": 103.890083291406
+  },
+  "MONTFORT SECONDARY SCHOOL": {
+    "lat": 18.76517375,
+    "lng": 99.0199001323188
+  },
+  "MONTFORT JUNIOR SCHOOL": {
+    "lat": 1.37465235,
+    "lng": 103.889536765944
+  },
+  "MILLENNIA INSTITUTE": {
+    "lat": 1.3510437,
+    "lng": 103.741159735249
+  },
+  "METHODIST GIRLS' SCHOOL (SECONDARY)": {
+    "lat": 1.34993195,
+    "lng": 103.885665833115
+  },
+  "METHODIST GIRLS' SCHOOL (PRIMARY)": {
+    "lat": 1.33284035,
+    "lng": 103.783576532458
+  },
+  "MERIDIAN SECONDARY SCHOOL": {
+    "lat": 1.36757525,
+    "lng": 103.948942657105
+  },
+  "MERIDIAN PRIMARY SCHOOL": {
+    "lat": 1.3767,
+    "lng": 103.9354
+  },
+  "MEE TOH SCHOOL": {
+    "lat": 1.3948814,
+    "lng": 103.908544845972
+  },
+  "MAYFLOWER PRIMARY SCHOOL": {
+    "lat": 1.3766349,
+    "lng": 103.8432028
+  },
+  "MAYFLOWER SECONDARY SCHOOL": {
+    "lat": 1.36906525,
+    "lng": 103.835770788453
+  },
+  "MARYMOUNT CONVENT SCHOOL": {
+    "lat": 1.3402824,
+    "lng": 103.839756271994
+  },
+  "MARSILING SECONDARY SCHOOL": {
+    "lat": 1.4373187,
+    "lng": 103.775930235673
+  },
+  "MARSILING PRIMARY SCHOOL": {
+    "lat": 1.4341551,
+    "lng": 103.773366677617
+  },
+  "MARIS STELLA HIGH SCHOOL": {
+    "lat": 1.34203865,
+    "lng": 103.878327550316
+  },
+  "MANJUSRI SECONDARY SCHOOL": {
+    "lat": 1.32756135,
+    "lng": 103.901713920553
+  },
+  "MAHA BODHI SCHOOL": {
+    "lat": 1.3284777,
+    "lng": 103.901534549589
+  },
+  "LOYANG VIEW SECONDARY SCHOOL": {
+    "lat": 1.3664422,
+    "lng": 103.95752962214
+  },
+  "LIANHUA PRIMARY SCHOOL": {
+    "lat": 29.38843995,
+    "lng": 106.496297751758
+  },
+  "LAKESIDE PRIMARY SCHOOL": {
+    "lat": 1.3385,
+    "lng": 103.7181
+  },
+  "KUO CHUAN PRESBYTERIAN SECONDARY SCHOOL": {
+    "lat": 1.3508434,
+    "lng": 103.854669319739
+  },
+  "KUO CHUAN PRESBYTERIAN PRIMARY SCHOOL": {
+    "lat": 1.3492022,
+    "lng": 103.855038987692
+  },
+  "KRANJI SECONDARY SCHOOL": {
+    "lat": 1.39047655,
+    "lng": 103.741138988005
+  },
+  "KRANJI PRIMARY SCHOOL": {
+    "lat": 1.39393915,
+    "lng": 103.747155059731
+  },
+  "KONG HWA SCHOOL": {
+    "lat": 1.3111953,
+    "lng": 103.887872783369
+  },
+  "KHENG CHENG SCHOOL": {
+    "lat": 1.33703365,
+    "lng": 103.84744227895
+  },
+  "KENT RIDGE SECONDARY SCHOOL": {
+    "lat": 1.3016542,
+    "lng": 103.7657086
+  },
+  "KEMING PRIMARY SCHOOL": {
+    "lat": 1.3453422,
+    "lng": 103.756399026699
+  },
+  "JUYING SECONDARY SCHOOL": {
+    "lat": 1.33825905,
+    "lng": 103.687357614006
+  },
+  "JURONGVILLE SECONDARY SCHOOL": {
+    "lat": 1.3512965,
+    "lng": 103.728977393883
+  },
+  "JURONG WEST SECONDARY SCHOOL": {
+    "lat": 1.3354612,
+    "lng": 103.70240256902
+  },
+  "JURONG WEST PRIMARY SCHOOL": {
+    "lat": 1.33931415,
+    "lng": 103.699027341411
+  },
+  "JURONG SECONDARY SCHOOL": {
+    "lat": 1.330365,
+    "lng": 103.724282
+  },
+  "JURONG PRIMARY SCHOOL": {
+    "lat": 1.3487249,
+    "lng": 103.733055638056
+  },
+  "JURONG PIONEER JUNIOR COLLEGE": {
+    "lat": 1.38545185,
+    "lng": 103.753923628179
+  },
+  "JUNYUAN SECONDARY SCHOOL": {
+    "lat": 1.35317525,
+    "lng": 103.933544728072
+  },
+  "JUNYUAN PRIMARY SCHOOL": {
+    "lat": 1.347782,
+    "lng": 103.939397246597
+  },
+  "JING SHAN PRIMARY SCHOOL": {
+    "lat": 1.3722578,
+    "lng": 103.852015207149
+  },
+  "JIEMIN PRIMARY SCHOOL": {
+    "lat": 1.42810765,
+    "lng": 103.830170918981
+  },
+  "INNOVA PRIMARY SCHOOL": {
+    "lat": 1.4292761,
+    "lng": 103.790734345447
+  },
+  "HWA CHONG INSTITUTION": {
+    "lat": 1.32627975,
+    "lng": 103.803525764524
+  },
+  "HUAMIN PRIMARY SCHOOL": {
+    "lat": 1.42686205,
+    "lng": 103.844264335013
+  },
+  "HUA YI SECONDARY SCHOOL": {
+    "lat": 1.3520885,
+    "lng": 103.721625174956
+  },
+  "HOUGANG SECONDARY SCHOOL": {
+    "lat": 1.37776255,
+    "lng": 103.882458889879
+  },
+  "HOUGANG PRIMARY SCHOOL": {
+    "lat": 1.3783581,
+    "lng": 103.881072021769
+  },
+  "HORIZON PRIMARY SCHOOL": {
+    "lat": 1.39998505,
+    "lng": 103.913116198002
+  },
+  "HONG WEN SCHOOL": {
+    "lat": 1.32178305,
+    "lng": 103.857526913019
+  },
+  "HOLY INNOCENTS' PRIMARY SCHOOL": {
+    "lat": 1.37499965,
+    "lng": 103.857429479967
+  },
+  "HOLY INNOCENTS' HIGH SCHOOL": {
+    "lat": 1.3716598,
+    "lng": 103.895743571696
+  },
+  "HILLGROVE SECONDARY SCHOOL": {
+    "lat": 1.3533675,
+    "lng": 103.7529905461
+  },
+  "HENRY PARK PRIMARY SCHOOL": {
+    "lat": 1.3170569,
+    "lng": 103.784216326585
+  },
+  "HAIG GIRLS' SCHOOL": {
+    "lat": 1.31173415,
+    "lng": 103.902673011513
+  },
+  "HAI SING CATHOLIC SCHOOL": {
+    "lat": 1.3745734,
+    "lng": 103.955157937103
+  },
+  "GUANGYANG SECONDARY SCHOOL": {
+    "lat": 1.34467265,
+    "lng": 103.849951265247
+  },
+  "GREENWOOD PRIMARY SCHOOL": {
+    "lat": 1.4397,
+    "lng": 103.8050
+  },
+  "GREENRIDGE SECONDARY SCHOOL": {
+    "lat": 1.37498585,
+    "lng": 103.764052858024
+  },
+  "GREENRIDGE PRIMARY SCHOOL": {
+    "lat": 1.39,
+    "lng": 103.77
+  },
+  "GREENDALE SECONDARY SCHOOL": {
+    "lat": 1.396986,
+    "lng": 103.9117179
+  },
+  "GREENDALE PRIMARY SCHOOL": {
+    "lat": 1.39620005,
+    "lng": 103.91272454371
+  },
+  "GONGSHANG PRIMARY SCHOOL": {
+    "lat": 1.3573263,
+    "lng": 103.949311140164
+  },
+  "GEYLANG METHODIST SCHOOL (SECONDARY)": {
+    "lat": 1.318638,
+    "lng": 103.883071
+  },
+  "GEYLANG METHODIST SCHOOL (PRIMARY)": {
+    "lat": 1.31760385,
+    "lng": 103.883251178634
+  },
+  "GAN ENG SENG SCHOOL": {
+    "lat": 1.2894326,
+    "lng": 103.823637855375
+  },
+  "GAN ENG SENG PRIMARY SCHOOL": {
+    "lat": 1.28587415,
+    "lng": 103.815131751379
+  },
+  "FUHUA SECONDARY SCHOOL": {
+    "lat": 1.34731075,
+    "lng": 103.727022786102
+  },
+  "FUHUA PRIMARY SCHOOL": {
+    "lat": 1.33648535,
+    "lng": 103.736454490791
+  },
+  "FUCHUN PRIMARY SCHOOL": {
+    "lat": 1.43072155,
+    "lng": 103.778230594479
+  },
+  "FRONTIER PRIMARY SCHOOL": {
+    "lat": 1.3369298,
+    "lng": 103.699637742028
+  },
+  "FIRST TOA PAYOH PRIMARY SCHOOL": {
+    "lat": 1.3404649,
+    "lng": 103.85586745343
+  },
+  "FERNVALE PRIMARY SCHOOL": {
+    "lat": 1.3899633,
+    "lng": 103.874210870536
+  },
+  "FERN GREEN PRIMARY SCHOOL": {
+    "lat": 1.3976461,
+    "lng": 103.880021415733
+  },
+  "FENGSHAN PRIMARY SCHOOL": {
+    "lat": 1.3300987,
+    "lng": 103.931882450527
+  },
+  "FARRER PARK PRIMARY SCHOOL": {
+    "lat": 1.3125247,
+    "lng": 103.851038162665
+  },
+  "FAIRFIELD METHODIST SCHOOL (SECONDARY)": {
+    "lat": 1.3014522,
+    "lng": 103.784498739096
+  },
+  "FAIRFIELD METHODIST SCHOOL (PRIMARY)": {
+    "lat": 1.3,
+    "lng": 103.78
+  },
+  "EVERGREEN SECONDARY SCHOOL": {
+    "lat": 1.44173915,
+    "lng": 103.794023844187
+  },
+  "EVERGREEN PRIMARY SCHOOL": {
+    "lat": 1.44383025,
+    "lng": 103.79473608556
+  },
+  "EUNOIA JUNIOR COLLEGE": {
+    "lat": 1.36188675,
+    "lng": 103.840842524555
+  },
+  "ENDEAVOUR PRIMARY SCHOOL": {
+    "lat": 1.4546,
+    "lng": 103.8172
+  },
+  "ELIAS PARK PRIMARY SCHOOL": {
+    "lat": 1.37491195,
+    "lng": 103.945175792384
+  },
+  "EDGEFIELD SECONDARY SCHOOL": {
+    "lat": 1.40019645,
+    "lng": 103.902309481059
+  },
+  "EDGEFIELD PRIMARY SCHOOL": {
+    "lat": 1.40035045,
+    "lng": 103.907527393054
+  },
+  "EAST SPRING SECONDARY SCHOOL": {
+    "lat": 1.35697385,
+    "lng": 103.961080604547
+  },
+  "EAST SPRING PRIMARY SCHOOL": {
+    "lat": 1.3528815,
+    "lng": 103.961917269287
+  },
+  "DUNMAN SECONDARY SCHOOL": {
+    "lat": 1.36116845,
+    "lng": 103.956013869646
+  },
+  "DUNMAN HIGH SCHOOL": {
+    "lat": 1.2987458,
+    "lng": 103.88218804962
+  },
+  "DUNEARN SECONDARY SCHOOL": {
+    "lat": 1.36358465,
+    "lng": 103.744546230373
+  },
+  "DEYI SECONDARY SCHOOL": {
+    "lat": 1.36674255,
+    "lng": 103.852111928452
+  },
+  "DE LA SALLE SCHOOL": {
+    "lat": 1.38,
+    "lng": 103.76
+  },
+  "DAZHONG PRIMARY SCHOOL": {
+    "lat": 1.3591826,
+    "lng": 103.747967856984
+  },
+  "DAMAI SECONDARY SCHOOL": {
+    "lat": 1.337598,
+    "lng": 103.926820239209
+  },
+  "DAMAI PRIMARY SCHOOL": {
+    "lat": 1.3354514,
+    "lng": 103.921391716523
+  },
+  "CREST SECONDARY SCHOOL": {
+    "lat": 1.343795,
+    "lng": 103.742809223251
+  },
+  "CRESCENT GIRLS' SCHOOL": {
+    "lat": 1.2934392,
+    "lng": 103.818023768366
+  },
+  "CORPORATION PRIMARY SCHOOL": {
+    "lat": 13.0981033,
+    "lng": 80.2860989883614
+  },
+  "CONCORD PRIMARY SCHOOL": {
+    "lat": 1.3803,
+    "lng": 103.7363
+  },
+  "COMPASSVALE SECONDARY SCHOOL": {
+    "lat": 1.396086,
+    "lng": 103.899711
+  },
+  "COMPASSVALE PRIMARY SCHOOL": {
+    "lat": 1.3945064,
+    "lng": 103.898035071575
+  },
+  "COMMONWEALTH SECONDARY SCHOOL": {
+    "lat": 1.31977715,
+    "lng": 103.745729488494
+  },
+  "CLEMENTI TOWN SECONDARY SCHOOL": {
+    "lat": 1.31566085,
+    "lng": 103.761906474871
+  },
+  "CLEMENTI PRIMARY SCHOOL": {
+    "lat": 1.31556955,
+    "lng": 103.763208833214
+  },
+  "CHUNG CHENG HIGH SCHOOL (YISHUN)": {
+    "lat": 1.41910045,
+    "lng": 103.837287338724
+  },
+  "CHUNG CHENG HIGH SCHOOL (MAIN)": {
+    "lat": 1.3053551,
+    "lng": 103.891770780866
+  },
+  "CHUA CHU KANG SECONDARY SCHOOL": {
+    "lat": 1.3830944,
+    "lng": 103.755231041797
+  },
+  "CHUA CHU KANG PRIMARY SCHOOL": {
+    "lat": 1.37793775,
+    "lng": 103.741984145872
+  },
+  "CHRIST CHURCH SECONDARY SCHOOL": {
+    "lat": 1.4266663,
+    "lng": 103.79314129894
+  },
+  "CHONGZHENG PRIMARY SCHOOL": {
+    "lat": 1.35054425,
+    "lng": 103.95092058935
+  },
+  "CHONGFU SCHOOL": {
+    "lat": 1.4387276,
+    "lng": 103.839290131375
+  },
+  "CHIJ ST. THERESA'S CONVENT": {
+    "lat": 1.27614885,
+    "lng": 103.822247692343
+  },
+  "CHIJ ST. NICHOLAS GIRLS' SCHOOL": {
+    "lat": 1.37344905,
+    "lng": 103.834077679759
+  },
+  "CHIJ ST. JOSEPH'S CONVENT": {
+    "lat": 1.39185175,
+    "lng": 103.902486638684
+  },
+  "CHIJ SECONDARY (TOA PAYOH)": {
+    "lat": 1.3326721,
+    "lng": 103.842846569568
+  },
+  "CHIJ PRIMARY (TOA PAYOH)": {
+    "lat": 1.3331269,
+    "lng": 103.842403002508
+  },
+  "CHIJ OUR LADY QUEEN OF PEACE": {
+    "lat": 1.3664051,
+    "lng": 103.768196996015
+  },
+  "CHIJ OUR LADY OF THE NATIVITY": {
+    "lat": 1.37311065,
+    "lng": 103.897689858145
+  },
+  "CHIJ OUR LADY OF GOOD COUNSEL": {
+    "lat": 1.3577786,
+    "lng": 103.86393027516
+  },
+  "CHIJ KATONG CONVENT": {
+    "lat": 1.3058723,
+    "lng": 103.9105929
+  },
+  "CHIJ (KELLOCK)": {
+    "lat": 1.274664,
+    "lng": 103.828055081751
+  },
+  "CHIJ (KATONG) PRIMARY": {
+    "lat": 1.30643785,
+    "lng": 103.910832010806
+  },
+  "CHANGKAT PRIMARY SCHOOL": {
+    "lat": 1.3404098,
+    "lng": 103.951985
+  },
+  "CHANGKAT CHANGI SECONDARY SCHOOL": {
+    "lat": 1.3404936,
+    "lng": 103.952971829757
+  },
+  "CEDAR PRIMARY SCHOOL": {
+    "lat": 1.34,
+    "lng": 103.88
+  },
+  "CEDAR GIRLS' SECONDARY SCHOOL": {
+    "lat": 1.33422015,
+    "lng": 103.874231225982
+  },
+  "CATHOLIC JUNIOR COLLEGE": {
+    "lat": 1.3252735,
+    "lng": 103.835362798308
+  },
+  "CATHOLIC HIGH SCHOOL": {
+    "lat": 1.3546,
+    "lng": 103.8451
+  },
+  "CASUARINA PRIMARY SCHOOL": {
+    "lat": 1.3728079,
+    "lng": 103.957227857039
+  },
+  "CANTONMENT PRIMARY SCHOOL": {
+    "lat": 1.2758142,
+    "lng": 103.839888386986
+  },
+  "CANOSSA CATHOLIC PRIMARY SCHOOL": {
+    "lat": 1.3146,
+    "lng": 103.8859
+  },
+  "CANBERRA SECONDARY SCHOOL": {
+    "lat": 1.45372065,
+    "lng": 103.814179879175
+  },
+  "CANBERRA PRIMARY SCHOOL": {
+    "lat": 1.45085035,
+    "lng": 103.815593716921
+  },
+  "BUKIT VIEW SECONDARY SCHOOL": {
+    "lat": 1.34569905,
+    "lng": 103.752192027608
+  },
+  "BUKIT VIEW PRIMARY SCHOOL": {
+    "lat": 1.34570095,
+    "lng": 103.753518499778
+  },
+  "BUKIT TIMAH PRIMARY SCHOOL": {
+    "lat": 1.33751905,
+    "lng": 103.766849370986
+  },
+  "BUKIT PANJANG PRIMARY SCHOOL": {
+    "lat": 1.37341685,
+    "lng": 103.769429160714
+  },
+  "BUKIT PANJANG GOVT. HIGH SCHOOL": {
+    "lat": 1.3554,
+    "lng": 103.7451
+  },
+  "BUKIT MERAH SECONDARY SCHOOL": {
+    "lat": 1.28589275,
+    "lng": 103.812992506677
+  },
+  "BUKIT BATOK SECONDARY SCHOOL": {
+    "lat": 1.3484109,
+    "lng": 103.740715388372
+  },
+  "BROADRICK SECONDARY SCHOOL": {
+    "lat": 1.30726495,
+    "lng": 103.886886639508
+  },
+  "BOWEN SECONDARY SCHOOL": {
+    "lat": 1.37088385,
+    "lng": 103.877601792999
+  },
+  "BOON LAY SECONDARY SCHOOL": {
+    "lat": 1.3427581,
+    "lng": 103.701673760327
+  },
+  "BOON LAY GARDEN PRIMARY SCHOOL": {
+    "lat": 1.3428882,
+    "lng": 103.712933143632
+  },
+  "BLANGAH RISE PRIMARY SCHOOL": {
+    "lat": 1.27640575,
+    "lng": 103.808809973143
+  },
+  "BENDEMEER SECONDARY SCHOOL": {
+    "lat": 1.3246123,
+    "lng": 103.8606641
+  },
+  "BENDEMEER PRIMARY SCHOOL": {
+    "lat": 1.32229385,
+    "lng": 103.86508845
+  },
+  "BEDOK VIEW SECONDARY SCHOOL": {
+    "lat": 1.3246274,
+    "lng": 103.9438629
+  },
+  "BEDOK SOUTH SECONDARY SCHOOL": {
+    "lat": 1.3255597,
+    "lng": 103.951028310102
+  },
+  "BEDOK GREEN SECONDARY SCHOOL": {
+    "lat": 1.334061,
+    "lng": 103.935858284652
+  },
+  "BEDOK GREEN PRIMARY SCHOOL": {
+    "lat": 1.3240565,
+    "lng": 103.937830565919
+  },
+  "BEATTY SECONDARY SCHOOL": {
+    "lat": 1.34154,
+    "lng": 103.851956
+  },
+  "BEACON PRIMARY SCHOOL": {
+    "lat": 1.3839,
+    "lng": 103.7737
+  },
+  "BARTLEY SECONDARY SCHOOL": {
+    "lat": 1.3406552,
+    "lng": 103.882327136868
+  },
+  "ASSUMPTION PATHWAY SCHOOL": {
+    "lat": 1.37022425,
+    "lng": 103.766428899176
+  },
+  "ASSUMPTION ENGLISH SCHOOL": {
+    "lat": 1.3690319,
+    "lng": 103.766544185464
+  },
+  "ANGSANA PRIMARY SCHOOL": {
+    "lat": 1.36358045,
+    "lng": 103.938910213149
+  },
+  "ANGLO-CHINESE SCHOOL (PRIMARY)": {
+    "lat": 1.31875235,
+    "lng": 103.835076922932
+  },
+  "ANGLO-CHINESE SCHOOL (JUNIOR)": {
+    "lat": 1.30928255,
+    "lng": 103.841302500824
+  },
+  "ANGLO-CHINESE SCHOOL (INDEPENDENT)": {
+    "lat": 1.30322315,
+    "lng": 103.780677772229
+  },
+  "ANGLO-CHINESE SCHOOL (BARKER ROAD)": {
+    "lat": 1.3197094,
+    "lng": 103.835661442133
+  },
+  "ANGLO-CHINESE JUNIOR COLLEGE": {
+    "lat": 1.3026072,
+    "lng": 103.785624327206
+  },
+  "ANGLICAN HIGH SCHOOL": {
+    "lat": 1.33021825,
+    "lng": 103.941759394989
+  },
+  "ANG MO KIO SECONDARY SCHOOL": {
+    "lat": 1.3676706,
+    "lng": 103.842545003431
+  },
+  "ANG MO KIO PRIMARY SCHOOL": {
+    "lat": 1.3691002,
+    "lng": 103.83936023523
+  },
+  "ANDERSON SERANGOON JUNIOR COLLEGE": {
+    "lat": 1.3791515,
+    "lng": 103.845797411482
+  },
+  "ANDERSON SECONDARY SCHOOL": {
+    "lat": 1.37541705,
+    "lng": 103.851722719772
+  },
+  "ANDERSON PRIMARY SCHOOL": {
+    "lat": 1.37631785,
+    "lng": 103.835561946494
+  },
+  "ANCHOR GREEN PRIMARY SCHOOL": {
+    "lat": 1.3903798,
+    "lng": 103.887353793371
+  },
+  "ALEXANDRA PRIMARY SCHOOL": {
+    "lat": 1.2913,
+    "lng": 103.8238
+  },
+  "AI TONG SCHOOL": {
+    "lat": 1.36071255,
+    "lng": 103.833017537958
+  },
+  "AHMAD IBRAHIM SECONDARY SCHOOL": {
+    "lat": 1.4360948,
+    "lng": 103.830054856667
+  },
+  "AHMAD IBRAHIM PRIMARY SCHOOL": {
+    "lat": 1.4338487,
+    "lng": 103.832709776836
+  },
+  "ADMIRALTY SECONDARY SCHOOL": {
+    "lat": 1.44591185,
+    "lng": 103.802908054132
+  },
+  "ADMIRALTY PRIMARY SCHOOL": {
+    "lat": 1.4429414,
+    "lng": 103.800345067448
+  }
+}
