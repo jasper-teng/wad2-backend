@@ -30,9 +30,9 @@ mongoose.connect(MONGO_URI)
 app.use(express.json());
 app.use(logger);
 app.use(cors({
-  origin: 'https://wad2-proj.vercel.app',  // EDITED for quick fix CORS between renderer and Vercel
-  methods: ['GET', 'POST'], 
-  allowedHeaders: ['Content-Type'], 
+  origin: ['https://wad2-proj.vercel.app', 'http://localhost:5173'],
+  methods: ['GET', 'POST'],
+  allowedHeaders: ['Content-Type'],
 }));
 
 // --- ROUTES ---
@@ -41,13 +41,18 @@ app.use('/users', userRoutes);
 app.use('/api', apiRoutes);
 
 
-// Data.sg CORS issue quick fix
+// Data.sg CORS issue fix
 const datasetId = 'd_688b934f82c1059ed0a6993d2a829089';
 const apiUrl = `https://data.gov.sg/api/action/datastore_search?resource_id=${datasetId}&limit=500`;
 
 app.get('/api/fetch-schools', async (req, res) => {
   try {
     const response = await axios.get(apiUrl); 
+    if (response.data && response.data.result && Array.isArray(response.data.result.records)) {
+      console.log('✅ Success! Received records:', response.data.result.records.length);
+    } else {
+      console.warn('⚠️ Unexpected response structure:', response.data);
+    }
     res.json(response.data)
   } catch (error) {
     console.error('Error fetching data:', error);
