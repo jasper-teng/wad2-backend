@@ -5,6 +5,7 @@ const mongoose = require('mongoose');
 const healthCheck = require('./controllers/healthchecks');
 const logger = require('./middleware/logger');
 const cors = require('cors');
+const axios = require('axios');
 // No longer need to import jwtauth here
 const apiRoutes = require('./routes/api.routes');
 const userRoutes = require('./routes/user.routes');
@@ -43,7 +44,7 @@ const apiUrl = `https://data.gov.sg/api/action/datastore_search?resource_id=${da
 app.get('/api/fetch-schools', async (req, res) => {
   try {
     const response = await axios.get(apiUrl); 
-    res.json(response.data);
+    res.json(response.data)
   } catch (error) {
     console.error('Error fetching data:', error);
     res.status(500).json({ error: 'Failed to fetch data' });
