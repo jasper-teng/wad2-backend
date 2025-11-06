@@ -29,7 +29,11 @@ mongoose.connect(MONGO_URI)
 // --- MIDDLEWARE ---
 app.use(express.json());
 app.use(logger);
-app.use(cors());
+app.use(cors({
+  origin: 'https://wad2-proj.vercel.app',  // EDITED for quick fix CORS between renderer and Vercel
+  methods: ['GET', 'POST'], 
+  allowedHeaders: ['Content-Type'], 
+}));
 
 // --- ROUTES ---
 app.use('/', healthCheck);
